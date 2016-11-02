@@ -3,7 +3,7 @@
  */
 //Display the bits within a byte.
     //Отображение битов, составляющих байт
-public class ShowBits {
+public class ShowBits1 {
     public static void main(String[] args) {
         int t;
         byte val;
