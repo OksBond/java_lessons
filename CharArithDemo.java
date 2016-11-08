@@ -12,7 +12,7 @@ public class CharArithDemo {
         ch++; //increment ch - a char can be incremented
         System.out.println("ch is now " + ch);
 
-        ch=97; //give ch a value Z -
+        ch=90; //give ch a value Z -
                 // a char can be assignted (присвоено) an integer value
         System.out.println("ch is now " +ch);
     }
