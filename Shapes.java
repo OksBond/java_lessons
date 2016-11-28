@@ -26,6 +26,17 @@ class Triangle extends TwoDShape {   //Triangle inherits TwoDShape.
     void showStyle() {
         System.out.println("Triangle " + style);
     }
+
+    //A subclass of TwoDShape for rectangles (прямоугольников).
+    class Rectangle extends TwoDShape{
+        boolean isSquare(){
+            if (width==height)return true;
+            return false;
+        }
+        double area (){
+            return width*height;
+        }
+    }
 }
 
 public class Shapes {
