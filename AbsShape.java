@@ -123,14 +123,35 @@ class Rectangle9 extends TwoDShape9{
     }
 }
 
+class Circle extends TwoDShape9{
+    //A default constructor.
+    Circle(){super();}
+
+    //Construct for Circle.
+    Circle (double x){
+        super(x, "circle");  //call superclass constructor
+    }
+
+    //Construct an object from an object.
+    Circle(Circle ob){
+        super(ob);  //Pass object to TqoDShape constructor.
+    }
+
+        double area (){
+        return getWidth()*getHeight()*3.14/4;
+    }
+
+}
+
 public class AbsShape {
     public static void main(String[] args) {
-           TwoDShape9 shapes[]=new TwoDShape9[4];
+           TwoDShape9 shapes[]=new TwoDShape9[5];
 
             shapes[0]=new Triangle9("outlined",8.0,12.0);
             shapes[1]=new Rectangle9(10);
             shapes[2]=new Rectangle9(10,4);
             shapes[3]=new Triangle9(7.0);
+            shapes[4]=new Circle(8.0);
 
             for (int i = 0; i <shapes.length ; i++) {
                 System.out.println("object is "+ shapes[i].getName());
