@@ -9,6 +9,7 @@ package bookpackext;
 public class UseBook {
     public static void main(String[] args) {
         //Qualify Book1 with its package name: bookpack.
+
         bookpack.Book1 books[]=new bookpack.Book1[5];
 
         books[0]=new bookpack.Book1("Java: A Beginner's Guide",
@@ -25,3 +26,4 @@ public class UseBook {
         for (int i = 0; i <books.length ; i++) books[i].show();
     }
 }
+
