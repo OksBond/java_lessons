@@ -15,22 +15,25 @@ class FixedQueue implements ICharQ{
     //Construct an empty queue given its size.
     public FixedQueue(int size){
         q=new char[size]; //allocate (выделить) memory for queue
+        //q=new char[size+1];
         putloc=getloc=0;
     }
 
     //Put a character into the queue.
     public void put (char ch){
         if (putloc==q.length){
+           // if (putloc==q.length-1){
             System.out.println("- Queue is full.");
             return;
         }
 
         q[putloc++]=ch;
+        //putloc++;
+        //q[putloc]=ch;
+
     }
 
     //Get a character from the queue.
-
-
     @Override
     public char get() {
         if (getloc==putloc){
@@ -38,6 +41,8 @@ class FixedQueue implements ICharQ{
             return (char) 0;
         }
         return q[getloc++];
+        //getloc++;
+        //return q[getloc];
     }
 }
 
@@ -125,13 +130,14 @@ class DynQueue implements ICharQ{
     //Construct an empty queue given its size.
     public DynQueue(int size){
         q=new char[size]; //allocate (выделить) memory for queue
+        //In russian version: q=new char[size+1]
         putloc=getloc=0;
     }
 
     //Put a character into the queue.
     public void put (char ch){
         if (putloc==q.length){  //In russian version: 'putloc==q.length-1'
-            //increase (увеличить) queue size -
+            //increase (увеличить) queue size
             char t[]=new char[q.length*2];
 
             //copy elements into new queue
@@ -219,9 +225,10 @@ public class IQDemo {
         }
 
         System.out.println("\nStore and consume from "+
-        "circular queue.");
+        "circular queue.");//Coxpaнeниe и использование данных кольц. очереди
 
         //Store in and consume from circular queue.
+        //Поместить символы в кольцевую очередь и извлечь их оттуда
         for (i = 0; i < 10; i++) {
             iQ.put((char)('A'+i));
             ch=iQ.get();
