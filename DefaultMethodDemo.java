@@ -32,6 +32,8 @@ public class DefaultMethodDemo {
     public static void main(String[] args) {
 
         MyIFImp obj=new MyIFImp();
+        int uID=MyIF.getUniversalID();//(2) to call a static method
+
 
         /*Can call getUserID(), because it is explicitly
         (недвусмысленно, явно) implemented by MyIFImp:

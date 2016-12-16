@@ -10,4 +10,9 @@ public interface MyIF {//This is a "normal" interface method declaration.
     default int getAdminID(){
         return 1;
     }
+
+    //(2) This is a static interface method.
+    static int getUniversalID(){
+        return 0;
+    }
 }
