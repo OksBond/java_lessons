@@ -9,7 +9,7 @@ public class ReadLines {
     public static void main(String[] args) throws IOException
     {
         //Create a BufferedReader using System.in
-        //Создаnm объект типа BufferedReader, связанный с потоком System.in
+        //Создать объект типа BufferedReader, связанный с потоком System.in
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 
         String str;
