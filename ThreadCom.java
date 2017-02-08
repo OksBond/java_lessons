@@ -16,6 +16,13 @@
 
         System.out.print("Tick ");
 
+        //(2) Chapter 11 Self Test; wait 1/2 second
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException exc){
+            System.out.println("Thread interrupted.");
+        }
+
         state="ticked"; //set the current state to ticked(...после такта "тик")
 
         notify(); //let tock() run; tick() notifies tock()
@@ -38,6 +45,13 @@
         }
 
         System.out.println("Tock");
+
+        //(2) Chapter 11 Self Test; wait 1/2 second
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException exc){
+            System.out.println("Thread interrupted.");
+        }
 
         state="tocked"; //set the current state to tocked(...после такта "так")
 
